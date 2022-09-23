@@ -1,6 +1,6 @@
 ### 1시간만에 끝내는 Vue.js(v2) 입문
 
-
+[TOC]
 
 출처: [한시간만에 끝내는 Vue.js 입문](https://www.youtube.com/watch?v=sqH0u8wN4Rs)
 
@@ -287,11 +287,36 @@ cmd> vue --version
 
 
 
+### VUE 예제
 
----
+#### 데이터핸들링
+
+* 2-way 바인딩
+* data()  메소드 내에서 return한  `{ 리터럴 } 객체`를 통해서 `<template>`영역에 있는 directive를 이용해 바인딩한다.
+* 다양한[ Directies](https://vuejs.org/api/built-in-directives.html)는 홈페이지를 방문해서 자세히 볼 것
 
 
 
-#### VUE 컴포넌트 라이프사이클
+#### 이벤트핸들링
+
+* oo
+
+
+
+#### 사용자 정의 메소드
+
+* oo
+
+
+
+#### 컴포넌트 라이프사이클
+
+* oo
+
+
+
+
+
+### VUE 컴포넌트 라이프사이클 다이어그램
 
 ![VUE 컴포넌트 라이프사이클](https://velog.velcdn.com/images%2Fgudwnsepdy%2Fpost%2Ffb547463-bd0e-4555-acf0-db48e2fdd9b8%2Fimage.png)
