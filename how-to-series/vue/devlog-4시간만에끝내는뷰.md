@@ -35,6 +35,7 @@ VSCODE에 Vetur 확장팩 설치
     }
     ```
 
+
 ##### Vue User Snippets 등록
 
 1. File > Preferences > Configure User Snippets 메뉴 이동
@@ -287,7 +288,7 @@ export default {
 
 
 
----
+
 
 ##### HtmlView.vue
 
@@ -305,20 +306,20 @@ innerText가 아닌 innerHtml를 사용하는 것
 >
 > ```vue
 > <template>
->   <div>
->     <p>{{htmlString}}</p>
->     <div v-html="htmlString"></div>
->   </div>
+> <div>
+>  <p>{{htmlString}}</p>
+>  <div v-html="htmlString"></div>
+> </div>
 > </template>
 > <script>
 > export default {
->   name: 'htmlView',
->   components: {},
->   data() {
->     return {
->       htmlString: '<p style="color:red;">빨간색 문자</p>'
->     }
->   }
+> name: 'htmlView',
+> components: {},
+> data() {
+>  return {
+>    htmlString: '<p style="color:red;">빨간색 문자</p>'
+>  }
+> }
 > }
 > </script>
 > 
@@ -342,43 +343,43 @@ innerText가 아닌 innerHtml를 사용하는 것
 >
 > ```vue
 > <template>
->   <div>
->     <input type="text" v-model="userId" />
->     <button @click="myFunction()">클릭</button>
->     <button @click="changeData()">변경</button>
->     <br />
->     <input type="text" v-model="num1" /> +
->     <input type="text" v-model="num2" /> =
->     <span>{{num1+num2}}</span>
->     <br />
->     <input type="text" v-model.number="num3" /> +
->     <input type="text" v-model.number="num4" /> =
->     <span>{{num3+num4}}</span>
->   </div>
+> <div>
+>  <input type="text" v-model="userId" />
+>  <button @click="myFunction()">클릭</button>
+>  <button @click="changeData()">변경</button>
+>  <br />
+>  <input type="text" v-model="num1" /> +
+>  <input type="text" v-model="num2" /> =
+>  <span>{{num1+num2}}</span>
+>  <br />
+>  <input type="text" v-model.number="num3" /> +
+>  <input type="text" v-model.number="num4" /> =
+>  <span>{{num3+num4}}</span>
+> </div>
 > </template>
 > <script>
 > export default {
->   name: 'inputView',
->   components: {},
->   data() {
->     return {
->       userId: 'demian.choe',
->       num1: 0,
->       num2: 0,
->       num3: 0,
->       num4: 0
->     }
->   },
->   methods: {
->     myFunction() {
->       // this는 VUE 컴포넌트로 data()에 있는 것이 모두 등록해 놓은 상태
->       console.log(this.userId)
->     },
+> name: 'inputView',
+> components: {},
+> data() {
+>  return {
+>    userId: 'demian.choe',
+>    num1: 0,
+>    num2: 0,
+>    num3: 0,
+>    num4: 0
+>  }
+> },
+> methods: {
+>  myFunction() {
+>    // this는 VUE 컴포넌트로 data()에 있는 것이 모두 등록해 놓은 상태
+>    console.log(this.userId)
+>  },
 > 
->     changeData() {
->       this.userId = 'CNK'
->     }
->   }
+>  changeData() {
+>    this.userId = 'CNK'
+>  }
+> }
 > }
 > </script>
 > 
@@ -444,70 +445,70 @@ innerText가 아닌 innerHtml를 사용하는 것
 >
 > ```vue
 > <template>
->   <div>
->     <div>
->       <select name="" id="">
->         <option :value="city.code" :key="city.code" v-for="city in cities">
->           {{ city.title }}
->         </option>
->       </select>
->     </div>
->     <div>
->       <table>
->         <thead>
->           <tr>
->             <th>제품번호</th>
->             <th>제품명</th>
->             <th>가격</th>
->             <th>주문수량</th>
->             <th>합계</th>
->           </tr>
->         </thead>
->         <tbody>
->           <tr :key="idx" v-for="(drink, idx) in drinkList">
->             <td>{{drink.drinkId}}</td>
->             <td>{{drink.drinkName}}</td>
->             <td>{{drink.price}}</td>
->             <td><input type="number" v-model="drink.qty" ></td>
->             <td>{{drink.price * drink.qty}}</td>
->           </tr>
->         </tbody>
->       </table>
->     </div>
->   </div>
+> <div>
+>  <div>
+>    <select name="" id="">
+>      <option :value="city.code" :key="city.code" v-for="city in cities">
+>        {{ city.title }}
+>      </option>
+>    </select>
+>  </div>
+>  <div>
+>    <table>
+>      <thead>
+>        <tr>
+>          <th>제품번호</th>
+>          <th>제품명</th>
+>          <th>가격</th>
+>          <th>주문수량</th>
+>          <th>합계</th>
+>        </tr>
+>      </thead>
+>      <tbody>
+>        <tr :key="idx" v-for="(drink, idx) in drinkList">
+>          <td>{{drink.drinkId}}</td>
+>          <td>{{drink.drinkName}}</td>
+>          <td>{{drink.price}}</td>
+>          <td><input type="number" v-model="drink.qty" ></td>
+>          <td>{{drink.price * drink.qty}}</td>
+>        </tr>
+>      </tbody>
+>    </table>
+>  </div>
+> </div>
 > </template>
 > <script>
 > export default {
->   components: {},
->   data() {
->     return {
->       cities: [
->         { title: '서울', code: '02' },
->         { title: '대전', code: '42' },
->         { title: '세종', code: '044' }
->       ],
->       drinkList: [
->         {
->           drinkId: '1',
->           drinkName: '코카콜라',
->           price: 700,
->           qty: 1
->         },
->         {
->           drinkId: '2',
->           drinkName: '오렌지주스',
->           price: 1200,
->           qty: 1
->         },
->         {
->           drinkId: '3',
->           drinkName: '커피',
->           price: 500,
->           qty: 1
->         }
->       ]
->     }
->   }
+> components: {},
+> data() {
+>  return {
+>    cities: [
+>      { title: '서울', code: '02' },
+>      { title: '대전', code: '42' },
+>      { title: '세종', code: '044' }
+>    ],
+>    drinkList: [
+>      {
+>        drinkId: '1',
+>        drinkName: '코카콜라',
+>        price: 700,
+>        qty: 1
+>      },
+>      {
+>        drinkId: '2',
+>        drinkName: '오렌지주스',
+>        price: 1200,
+>        qty: 1
+>      },
+>      {
+>        drinkId: '3',
+>        drinkName: '커피',
+>        price: 500,
+>        qty: 1
+>      }
+>    ]
+>  }
+> }
 > }
 > </script>
 > 
@@ -552,5 +553,205 @@ innerText가 아닌 innerHtml를 사용하는 것
 > ```vue
 > 
 > ```
+
+
+
+
+
+
+
+#### Events 처리
+
+
+
+##### ClickView.vue
+
+* vanilla JS에서는 onclick을 VUE에서는 @click으로 하고, @click="increaseCounter()"라 하자. `()`는 생략 가능
+* 데이터 정의는 data() 함수에서
+* 사용자 정의 함수는 methods 객체에서
+
+
+
+
+
+##### ChangeView.vue
+
+* select 요소에는 v-model을 이용해서 선택한 값을
+* option 요소에는 v-for를 이용한 목록을 
+* select1이 선택되면 select2 변화되도록 
+  * onchange 이벤트를 이용하여 (추천)
+  * 양방향 바인딩으로도 가능 (비추천)
+* `@`는 지시어로 `v-on:`으로도 사용함.
+* 이벤트를 전달하려면 `@change="changeCity($event)`로, 사용하는 곳에서는 `changeCity(ev){ ... }` 형식으로 사용
+
+> (소스)
 >
+> ```vue
+> <template>
+>   <div>
+>     <select @change="changeCity" v-model="selectedCity">
+>       <option value="">==도시 선택==</option>
+>       <option :value="city.code" :key="city.code" v-for="city in cityList">
+>         {{ city.title }}
+>       </option>
+>     </select>
+>     <select>
+>       <option value="">==onchange()==</option>
+>       <option
+>         :value="dong.dongCode"
+>         :key="dong.dongCode"
+>         v-for="dong in selectedDongList"
+>       >
+>         {{ dong.dongTitle }}
+>       </option>
+>     </select>
+>     <br />
+>     <select>
+>       <option value="">==remove event==</option>
+>       <option
+>         :value="dong.dongCode"
+>         :key="dong.dongCode"
+>         v-for="dong in dongList.filter((dong) => dong.code === selectedCity)"
+>       >
+>         {{ dong.dongTitle }}
+>       </option>
+>     </select>
+>   </div>
+> </template>
+> <script>
+> export default {
+>   components: {},
+>   data() {
+>     return {
+>       selectedCity: '',
+>       cityList: [
+>         { code: '02', title: '서울' },
+>         { code: '042', title: '대전' },
+>         { code: '044', title: '세종' }
+>       ],
+>       dongList: [
+>         { code: '02', dongCode: '021', dongTitle: '구로동' },
+>         { code: '02', dongCode: '022', dongTitle: '구로1동' },
+>         { code: '02', dongCode: '023', dongTitle: '구로2동' },
+>         { code: '042', dongCode: '0421', dongTitle: '법동' },
+>         { code: '042', dongCode: '0422', dongTitle: '월평동' },
+>         { code: '044', dongCode: '0441', dongTitle: '보람동' },
+>         { code: '044', dongCode: '0442', dongTitle: '보람1동' },
+>         { code: '044', dongCode: '0443', dongTitle: '보람2동' },
+>         { code: '044', dongCode: '0444', dongTitle: '보람3동' }
+>       ],
+>       selectedDongList: []
+>     }
+>   },
+>   setup() {},
+>   created() {},
+>   mounted() {},
+>   unmounted() {},
+>   methods: {
+>     changeCity() {
+>       this.selectedDongList = this.dongList.filter(
+>         (dong) => dong.code === this.selectedCity
+>       )
+>     }
+>   }
+> }
+> </script>
 > 
+> ```
+
+
+
+##### KeyView.vue
+
+* @keyup="checkEvent($event)"를 이용해서 
+* 또는 @keyup.enter="doSearch()"를 바로 호출. 이외에도
+  * delete (backspace 포함)
+  * up/down/left/right
+  * esc
+  * space, tab
+  * ctrl, alt, shift
+* `stop` >>  event.stopPropagation() 호출 후에 정의된 함수 호출
+* `prevent` >> event.preventDefault() 호출 후에 정의된 함수 호출
+
+
+
+
+
+---
+
+### Appendix
+
+#### Vanilla javascript
+
+```javascript
+#
+var date = new Date();
+var a = `
+${ date.getFullYear() }년
+${ date.getMonth()+1 }월
+${ date.getDate() }일 입니다
+`
+console.log(a);
+
+# Intl 내장함수
+var b = new Intl.DateTimeFormat('kr').format(date);
+console.log(b);
+var c = new Intl.DateTimeFormat('kr', {dateStyle : 'full', timeStyle: 'full'}).format(date);
+console.log(c);
+var d = new Intl.RelativeTimeFormat().format(-10,'days');
+console.log(d);
+
+```
+
+
+
+#### TC39
+
+stage0: 이니시 열기 >> stage 1: 제안 >> stage3: 초안 작성 >> **stage3: 문서작성완료** >> stage 4: 테스트 후 브라우저에 추가
+
+##### Temporal
+
+```powershell
+cmd> npm install @js-temporal/polyfill
+```
+
+
+
+```javascript
+import {Temporal} from '@js-temporal/polyfill';
+
+// 1. 현재시간 구하기
+const now1 = Temporal.Now.plainDateTimeISO();
+console.log(now1.toString());
+// 2022-09-19T15:03:01.813381812
+
+const now2 = Temporal.Now.plainDateISO();
+console.log(now2.toString());
+// 2022-09-19
+
+const now3 = Temporal.Now.plainTimeISO();
+console.log(now3.toString());
+// 15:03:01.813381812
+
+
+// 2. Temporal로 시간 생성 그리고 더하기, 빼기 그리고 차이
+const atime1 = Temporal.plainDate(2022, 9, 23);
+console.log(atime1.toString());
+// 2022-09-23
+
+atime1.add({days: 2, months: 3});
+console.log(atime1.toString());
+// 2022-12-25
+
+atime1.subtract({days: 2, months: 3});
+console.log(atime1.toString());
+// 2022-09-23
+
+var atime2 = Temporal.PlainDateTime.from('2022-09-30T12:00:00');
+const result = atime2.since(atime1);
+console.log(result.days + '  ' + result.hours);
+
+
+
+```
+
